@@ -126,7 +126,7 @@ USE_TZ = True
 TEMPLATE_DIRS = (
     os.path.join(BASE_DIR, '/portfolio/templates'),
 )
-STATIC_ROOT = os.path.join(BASE_DIR, 'static/')
+STATIC_ROOT = os.path.join(BASE_DIR, '/portfolio/static/')
 STATIC_URL = 'static/'
 
 # Default primary key field type
