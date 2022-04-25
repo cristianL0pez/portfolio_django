@@ -1,0 +1,4 @@
+## en este archivo estaran todas las variables de entorno cambiarlas del archivo
+## do not put this file under version control!
+SECRET_KEY='secret-key'
+DEBUG=True
