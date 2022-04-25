@@ -1,4 +1,4 @@
-version: "3.9"
+version: "3"
    
 services:
   db:
@@ -15,6 +15,7 @@ services:
     
     volumes:
       - .:/portfolio
+      - static-content:/portfolio/static
     ports:
       - "8000:8000"
     env_file: 
@@ -25,7 +26,14 @@ services:
       - POSTGRES_PASSWORD=postgres
     depends_on:
       - db
- 
-
+  nginx:
+   build: ./nginx
+   volumes:
+     - static-content:/static
+   ports:
+     - "80:80"
+   depends_on:
+     - web 
 volumes:
-  static:
+  static-content:
+  
